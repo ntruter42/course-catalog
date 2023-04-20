@@ -17,10 +17,10 @@ function tutorWageCalculator(timesheet, level) {
 			break;
 	}
 
+	// check if weekHours contains more than 4 days and less than 8 days
 	if (weekHours.length >= 5 && weekHours.length <= 7) {
 		for (let hours of weekHours) {
 			hoursSum += Number(hours);
-			console.log(hours);
 		}
 	} else {
 		return 0;
@@ -28,5 +28,3 @@ function tutorWageCalculator(timesheet, level) {
 
 	return hoursSum * hourlyRate;
 }
-
-tutorWageCalculator("4-4-4-8-5", 1);
