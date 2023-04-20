@@ -45,8 +45,8 @@ describe('courseCost', function () {
 			"code": "r1",
 			"description": "Python",
 			"cost": 7850,
-			"discount": (7850 / 10) * 0,
-			"amountDue": (7850 / 10) * 10
+			"discount": 0,
+			"amountDue": 7850
 		}, courseCost("p1", "2023-02-05"));
 
 		assert.deepEqual({
@@ -56,10 +56,6 @@ describe('courseCost', function () {
 			"cost": 8990,
 			"discount": 0,
 			"amountDue": 8990
-			}
-			
-			,
-			
-			courseCost("p2", "2023-02-05"));
+			}, courseCost("p2", "2023-02-05"));
 	});
 });
