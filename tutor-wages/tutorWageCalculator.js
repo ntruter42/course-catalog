@@ -1,32 +1,32 @@
 function tutorWageCalculator(timesheet, level) {
+	// create variables to store daily hours, total hours and hourly hourlyRate
 	let weekHours = timesheet.split('-');
 	let hoursSum = 0;
-	let rate = 0;
+	let hourlyRate = 0;
 
+	// set hourly hourlyRate for wages calculation
 	switch (level) {
 		case 1:
-			rate = 75;
+			hourlyRate = 75;
 			break;
 		case 2:
-			rate = 90;
+			hourlyRate = 90;
 			break;
 		case 3:
-			rate = 105;
-			break;
-		default:
+			hourlyRate = 105;
 			break;
 	}
 
 	if (weekHours.length >= 5 && weekHours.length <= 7) {
-		for (let hours in weekHours) {
+		for (let hours of weekHours) {
 			hoursSum += Number(hours);
-		}
-
-		if (hoursSum > 40) {
-			return hoursSum * rate;
+			console.log(hours);
 		}
 	} else {
 		return 0;
 	}
-	return;
+
+	return hoursSum * hourlyRate;
 }
+
+tutorWageCalculator("4-4-4-8-5", 1);
