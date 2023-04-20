@@ -3,6 +3,7 @@ body {
 	margin: auto;
 }
 
+/* NAVIGATION SECTION */
 nav {
 	width: 100%;
 	margin: auto;
@@ -17,13 +18,13 @@ li {
 	list-style: none;
 }
 
-a {
+ahover {
 	color: black;
+	cursor: none;
 }
 
-a:hover {
-	color: black;
-	font-size: 1.2em;
+li:hover {
+	background-color: #ccc;
 }
 
 @media screen and (max-width: 400px) {
@@ -36,14 +37,29 @@ a:hover {
 	}
 
 	li {
-		margin: 0;
 		display: flex;
-		text-align: center;
 		justify-content: center;
 	}
 }
 
-/*
-* {
-	outline: 1px solid lightgrey;
+/* INTRO SECTION */
+#intro-section span p {
+	text-align: center;
 }
+
+/* COURSES SECTION */
+
+button {
+	border: 0;
+}
+
+.course-item {
+	outline: 2px solid grey;
+}
+
+.course-item button:hover {
+	background-color: cyan;
+}
+
+/*
+* { outline: 1px solid lightgrey; }
