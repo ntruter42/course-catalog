@@ -179,7 +179,7 @@ p {
 }
 
 .hidden-sm {
-  display: none;
+  display: none !important;
 }
 
 @media only screen and (min-width: 33.75em) {  /* 540px */
@@ -238,7 +238,7 @@ p {
   }
 
   .hidden-sm {
-    display: block;
+    display: none;
   }
 }
 
